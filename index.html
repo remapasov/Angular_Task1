@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+	</head>
+
+	<body ng-app="app">
+		<div class="main">
+			<div class="enterForm" ng-controller="inputDatasController">
+				<input type="text" ng-model="datas.dataX">
+				<select ng-model="datas.sign">
+					<option>+</option>
+					<option>-</option>
+					<option>*</option>
+					<option>/</option>
+				</select>
+				<input type="text" ng-model="datas.dataY">
+			</div>
+			<div class="submitDatas" ng-controller="resultController">
+				<input type="button" value="submit" ng-click="submit()">
+				<div>Result: {{result}}</div>
+			</div>
+
+		</div>
+
+	<script src="app/lib/jquery/dist/jquery.min.js"></script>
+	<script src="app/lib/angular/angular.min.js"></script>
+	<script src="app/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="app.module.js"></script>
+	<script src="app/components/controllers/inputDatasController.js"></script>
+	<script src="app/components/controllers/resultController.js"></script>
+	<script src="app/components/services/calcService.js"></script>
+
+	</body>
+</html>
